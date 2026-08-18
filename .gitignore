@@ -1,0 +1,8 @@
+**/*.DS_Store
+**/*.ipynb_checkpoints
+**/checkpoint
+**/tmp
+**/__pycache__/
+**.pptx
+**/dev
+**/not_used

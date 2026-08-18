@@ -1,0 +1,45 @@
+# Xavier Bresson
+# conda env create -f environment.yml
+# conda activate gnn_course
+# note: It took 10 min to install the environment
+# Version : 18 Aug 2026
+
+name: gnn_course
+channels:
+  - conda-forge # numpy/scipy etc
+  - defaults
+dependencies:
+  # basic
+  - python=3.11
+  - pip=24.2
+  - jupyter=1.0
+  - ipython=8.12
+  - pymetis=2023.1
+  # pip-specific installs
+  - pip: # critical : a double indentation is required to install pip packages below
+    - numpy==1.24.3
+    - pandas==2.0.3
+    - scipy==1.10.1
+    - matplotlib==3.7.1
+    - seaborn==0.13.0
+    - networkx==3.1
+    # PyTorch
+    - torch==2.1.2
+    - torchvision==0.16.2
+    - torchaudio==2.1.2
+    # Molecule
+    - rdkit==2023.9.6 
+    # graph
+    - python-louvain==0.16
+    # interactive 3d visualization
+    - plotly==5.22.0 
+    # tsne
+    - scikit-learn==1.3.2 
+    # data visualization
+    - umap-learn==0.5.6 
+    # gnn / DGL
+    - --find-links https://data.dgl.ai/wheels/repo.html
+    - dgl==1.0.2
+    # gnn / PyG
+    - torch_geometric==2.5.1 
+
