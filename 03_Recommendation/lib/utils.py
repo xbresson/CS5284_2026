@@ -177,10 +177,7 @@ def nldr_visualization(W):
 
     # Compute the first three Laplacian Eigenmaps
     lamb, U = scipy.sparse.linalg.eigsh(L, k=4, which='SM')
-    
-    # Sort eigenvalue from smallest to largest values
-    lamb, U = sortEVD(lamb, U)
-    
+        
     # Coordinates of graph vertices in the low-dim embedding manifold
     X = U[:,1]
     Y = U[:,2]
